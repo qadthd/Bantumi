@@ -139,7 +139,7 @@ class BantumiGame {
     return this.getPits(player).filter(i => this.board[i] > 0);
   }
 
-  // Глубокое копирование для использования в ИИ
+  // Глубокое копирование состояния (используется функцией Undo)
   clone() {
     const copy = new BantumiGame(this.stonesPerPit);
     copy.board = [...this.board];
